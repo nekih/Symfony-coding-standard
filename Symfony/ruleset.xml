@@ -10,11 +10,14 @@
     <!-- Include the whole PSR-1 standard -->
     <rule ref="PSR1"/>
     <!-- Include the whole PSR-2 standard -->
-    <rule ref="PSR2"/>
-    <!--
+    <rule ref="PSR2">
+        <exclude-pattern>src/Sylius/*</exclude-pattern>
+    </rule>
 
-    See the [documented coding standard](http://symfony.com/doc/current/contributing/code/standards.html)
-    -->
+        <!--
+
+        See the [documented coding standard](http://symfony.com/doc/current/contributing/code/standards.html)
+        -->
 
     <rule ref="Generic.ControlStructures.InlineControlStructure"/>
     <rule ref="Generic.Formatting.SpaceAfterCast"/>
@@ -50,6 +53,15 @@
         <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
     </rule>
 
+    <rule ref="PSR1.Methods.CamelCapsMethodName">
+        <exclude-pattern>*/spec/*</exclude-pattern>
+        <exclude-pattern>*/Tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Scope.MethodScope">
+        <exclude-pattern>*/spec/*</exclude-pattern>
+    </rule>
+
     <!-- Don't enforce Zend's private member underscores -->
     <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
         <severity>0</severity>
@@ -69,33 +81,5 @@
     </rule>
     <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
         <severity>0</severity>
-    </rule>
-
-    <rule ref="Symfony.Commenting.FunctionComment.MissingParamComment">
-        <severity>0</severity>
-    </rule>
-
-    <rule ref="Symfony.Commenting.FunctionComment.Missing">
-        <type>error</type>
-    </rule>
-
-    <rule ref="Symfony.Commenting.ClassComment.Missing">
-        <type>error</type>
-    </rule>
-
-    <rule ref="Symfony.Commenting.ClassComment.Blacklisted">
-        <type>error</type>
-    </rule>
-
-    <rule ref="Symfony.Commenting.FunctionComment.MissingReturn">
-        <type>error</type>
-    </rule>
-
-    <rule ref="Symfony.Commenting.FunctionComment.SpacingBeforeTags">
-        <severity>0</severity>
-    </rule>
-
-    <rule ref="Symfony.Commenting.ClassComment.SpacingBeforeTags">
-        <message>There should always be a description, followed by a blank line, before the tags of a class comment.</message>
     </rule>
 </ruleset>
