@@ -1,9 +1,7 @@
 {
-    "name": "escapestudios/symfony2-coding-standard",
+    "name": "nekih/symfony-coding-standard",
     "type": "phpcodesniffer-standard",
-    "description": "CodeSniffer ruleset for the Symfony 2+ coding standard",
-    "keywords": ["Symfony2", "Symfony", "coding standard", "phpcs"],
-    "homepage": "https://github.com/djoos/Symfony-coding-standard",
+    "description": "Fork CodeSniffer ruleset for the Symfony 2+ coding standard",
     "license": "MIT",
     "authors": [
         {
@@ -13,6 +11,10 @@
         {
             "name": "Community contributors",
             "homepage": "https://github.com/djoos/Symfony-coding-standard/graphs/contributors"
+        },
+        {
+            "name": "Nekih fork for personal use",
+            "email": "php@fratczak.org"
         }
     ],
     "extra": {
@@ -21,10 +23,6 @@
         }
     },
     "minimum-stability": "dev",
-    "support" : {
-        "source": "https://github.com/djoos/Symfony-coding-standard",
-        "issues": "https://github.com/djoos/Symfony-coding-standard/issues"
-    },
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*",
         "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0"
